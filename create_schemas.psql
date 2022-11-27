@@ -1,0 +1,6 @@
+#!/bin/bash
+
+psql -h localhost -d postgres -U postgres -p 5432 -c "create table test(test text);"
+psql -h localhost -d postgres -U postgres -p 5433 -c "create table test(test text);"
+
+psql -h localhost -d postgres -U postgres -p 5432 -c "insert into test values ('asdf');"
